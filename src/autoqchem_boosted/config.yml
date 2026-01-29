@@ -1,0 +1,4 @@
+remote:
+    atoms_per_processor: 1
+    max_processors: 16
+    ram_per_processor: 2

@@ -1,0 +1,15 @@
+*.vscode
+*.xyz
+*.csv
+*.pt
+*.json
+*.pyc
+*.dat
+*.DS_Store
+#*.ipynb
+__pycache__/
+*.egg-info/
+*.npy
+figs/
+dataset_files/
+results/
