@@ -21,8 +21,8 @@ This environment was tested on Ubuntu 20.04.5 with CUDA Version 11.7. It should 
 
 All datasets are contained within the `dataset_files` folder, with the subfolders below corresponding to the various sections of this study, as outlined in the paper: 
 
-1. `20250612_transaminase_dataset_dft_descriptors_boltzmann.csv`: contains the initial transaminase HTE dataset on 42 ketones
-2. `additional_cyclic_dataset_dft_descriptors_boltzmann.csv`: contains the held-out dataset of cyclic ketones used to validate the models built on the initial dataset
+1. `transaminase_dataset_dft_descriptors_boltzmann_final.csv`: contains the initial transaminase HTE dataset on 42 ketones
+2. `additional_cyclic_dataset_dft_descriptors_boltzmann_final.csv`: contains the held-out dataset of cyclic ketones used to validate the models built on the initial dataset
 3. `scaleup_ketones_dataset_dft_descriptors_boltzmann.csv`: contains the dataset of ketones used for the scale-up experiments
 
 ## General Notes and Disclaimer
@@ -40,5 +40,5 @@ The easiest way to train and deploy the per-enzyme models built from the initial
 
 * `original_ketones_modeling.ipynb`: if you would like, run the cells in order to build the conversion and selectivity models from the initial dataset. Relevant predictions and the selected features obtained by the MVLR modeling will then be saved to the `src/results` directory. Note that this directory has already been pre-populated with the results we obtained, so you need not run this notebook if you don't wish.
 
-* `heldout_modeling.ipynb` and `scaleup_modeling.ipynb`: these notebooks show examples of deploying the best trained models (RF/DFT features for conversion, and Linear Regression with selected features for selectivity) to generate predictions on new ketones. To generate predictions on your own data, simply replace the path to the `heldout_df` in the first cell after the imports, and then run all cells in order. Your .csv file must be in the same format as the `additional_cyclic_dataset_dft_descriptors_boltzmann.csv` and `scaleup_ketones_dataset_dft_descriptors_boltzmann.csv` files in order to run correctly.  
+* `heldout_modeling.ipynb` and `scaleup_modeling.ipynb`: these notebooks show examples of deploying the best trained models (RF/DFT features for conversion, and Linear Regression with selected features for selectivity) to generate predictions on new ketones. To generate predictions on your own data, simply replace the path to the `heldout_df` in the first cell after the imports, and then run all cells in order. Your .csv file must be in the same format as the `additional_cyclic_dataset_dft_descriptors_boltzmann_final.csv` and `scaleup_ketones_dataset_dft_descriptors_boltzmann.csv` files in order to run correctly.  
 
