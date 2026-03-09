@@ -32,7 +32,7 @@ Several parts of the code require some combination of the following inputs: `mod
 * `model_type`: can take as input `'rf'` or `'lin'`, or `'nn'` (for the Random Forest and Linear Regression models, respectively)
 * `task_type`: can take as input `'bin'` or `'reg'` (for binary classification and regression, respectively)
 * `feature_type`: can take as input `'ohe'`, `'fgp'`, `'physchem'`, `'dft'`, or `'physchemdft'` (for one-hot encoded, fingerprint-only, physicochemical-only, DFT-only, and concatenated physicochemical and DFT features, respectively). Note that the DFT options will use pre-selected DFT features - one can also give a list of specified DFT features, either global or atom-level, i.e. `['electronegativity', 'Mulliken_charge.Carbon1', 'B5.CC1']`, which will use the molecule electronegativity, Mulliken charge of the smaller alpha carbon, and Sterimol B5 down the Carbonyl-smaller alpha carbon bond.
-* `feature_type`: can take as input `'ohe'`, `'fgp'`, `'dft'`, or `'fgpdft'` (for one-hot encoded, fingerprint-only, DFT-only, and concatenated fingerprint and DFT features, respectively)
+* `target_type`: can take as input `'conversion'` or `'ddg'` (for conversion modeling or selectivity modeling, respectively)
 
 ## Training and Using Models
 
