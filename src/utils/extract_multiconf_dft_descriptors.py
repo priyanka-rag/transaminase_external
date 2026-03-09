@@ -58,13 +58,6 @@ def find_reactive_atoms(mol):
     carbon2 = reactive_atoms[2]
     return carbon1, carbonyl, carbon2
 
-'''#smi = 'CC(=O)c1cccc(NC(=O)OC(C)(C)C)c1'
-smi = 'CCCn1cnc2c1c(=O)n(CCCCC(C)=O)c(=O)n2C'
-print(Chem.MolToSmiles(map_ketone(smi)))
-mol = map_ketone(smi)
-print(find_reactive_atoms(mol))
-pdb.set_trace()'''
-
 # extracts all molecule-level descriptors from the .json file associated with this molecule
 def extract_molecule_descriptors(smi):
    # get the molecule ID
